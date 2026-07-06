@@ -1,0 +1,52 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(npx next *)",
+      "Bash(npx eslint *)",
+      "Bash(./node_modules/.bin/prisma --version)",
+      "Bash(./node_modules/.bin/prisma migrate *)",
+      "Bash(node -e \"console.log\\('loadEnvFile:', typeof process.loadEnvFile\\)\")",
+      "Bash(pnpm add *)",
+      "Bash(node -e 'console.log\\(require\\('\\\\''node_modules/@prisma/config/package.json'\\\\''\\).types||require\\('\\\\''node_modules/@prisma/config/package.json'\\\\''\\).main\\)')",
+      "Bash(find node_modules/@prisma/config -name *.d.ts)",
+      "Bash(awk '/MigrationsConfigShape\\( |=\\)/,/};/' node_modules/.pnpm/@prisma+config@7.8.0/node_modules/@prisma/config/dist/index.d.ts)",
+      "Bash(./node_modules/.bin/prisma generate *)",
+      "Bash(./node_modules/.bin/tsc --noEmit -p tsconfig.json)",
+      "Bash(./node_modules/.bin/next build *)",
+      "Bash(./node_modules/.bin/next start *)",
+      "Bash(echo \"started pid $!\")",
+      "Bash(curl -s -o /dev/null -w \"home:%{http_code}\\\\n\" http://localhost:3987/)",
+      "Bash(./node_modules/.bin/prisma db *)",
+      "Bash(./node_modules/.bin/next lint *)",
+      "Bash(./node_modules/.bin/eslint src *)",
+      "Bash(curl -s -b /tmp/pj.txt http://localhost:3988/profile)",
+      "Bash(kill 52413)",
+      "Bash(echo \"=== TSC EXIT: $? ===\")",
+      "Bash(break)",
+      "Bash(curl -s --cookie \"NEXT_LOCALE=en\" http://localhost:3011/)",
+      "Bash(curl -s http://localhost:3011/)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(kill %1)",
+      "Bash(echo \"EXIT=$?\")",
+      "Bash(curl -s -X POST --cookie \"NEXT_LOCALE=en\" -H \"Content-Type: application/json\" -d 'not-json' http://localhost:3011/api/shorten)",
+      "Bash(curl -s -X POST --cookie \"NEXT_LOCALE=en\" -H \"Content-Type: application/json\" -d '{\"url\":\"abc\"}' http://localhost:3011/api/shorten)",
+      "Bash(curl -s -X POST -H \"Content-Type: application/json\" -d '{\"url\":\"abc\"}' http://localhost:3011/api/shorten)",
+      "Bash(curl -s -X POST --cookie \"NEXT_LOCALE=en\" -H \"Content-Type: application/json\" -d '{\"email\":\"a@b.com\",\"password\":\"123\"}' http://localhost:3011/api/auth/register)",
+      "Bash(pnpm exec *)",
+      "Bash(ls -la .husky)",
+      "Bash(cat .husky/pre-commit)",
+      "Bash(cd \"/Users/vophuocthanh/Documents/SoftwareEngineer/Fullstack/source-code-2026/short-url-qrcode\" && printf 'pnpm exec commitlint --edit \"$1\"\\\\n' > .husky/commit-msg && cat .husky/commit-msg)",
+      "Bash(git add *)",
+      "Bash(git rm *)",
+      "Bash(LC_ALL=C sed -i '' s/SnipLink/Linkora/g src/app/u/[username]/page.tsx src/app/profile/[slug]/page.tsx 'src/app/\\(auth\\)/register/page.tsx' 'src/app/\\(auth\\)/login/page.tsx' messages/en.json messages/vi.json)",
+      "Bash(LC_ALL=C sed -i '' s/sniplink/linkora/g src/components/features/qr-generator/qr-code-preview.tsx src/components/features/bulk-shortener/bulk-shortener-panel.tsx)",
+      "Bash(LC_ALL=C sed -i '' 's/SnipLink/Linkora/g' README.md FEATURES_ANALYSIS.md)",
+      "Bash(LC_ALL=C sed -i '' 's/short-url-qrcode/linkora/g' README.md)"
+    ],
+    "additionalDirectories": [
+      "/tmp",
+      "/Users/vophuocthanh/Documents/SoftwareEngineer/Fullstack/source-code-2026/short-url-qrcode/.husky"
+    ]
+  }
+}

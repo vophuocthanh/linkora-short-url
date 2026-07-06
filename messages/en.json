@@ -1,0 +1,234 @@
+{
+  "Header": {
+    "badge": "Shorten links & generate QR codes in a snap",
+    "tagline": "Turn long, messy links into tidy URLs, or generate crisp QR codes — fast, beautiful, free."
+  },
+  "Footer": {
+    "credit": "Turn every link into a moment"
+  },
+  "AuthNav": {
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "signOut": "Sign out"
+  },
+  "LocaleSwitcher": {
+    "label": "Language"
+  },
+  "Tabs": {
+    "shorten": "Shorten",
+    "bulk": "Bulk",
+    "qrcode": "QR Code"
+  },
+  "Shortener": {
+    "inputLabel": "Paste the link you want to shorten",
+    "placeholder": "https://example.com/a-very-long-link...",
+    "submit": "Shorten",
+    "submitting": "Working…",
+    "genericError": "Couldn't shorten the link, please try again.",
+    "connectionError": "Connection error, please try again.",
+    "resultTitle": "Your link is ready",
+    "createQrAria": "Create a QR code for this link",
+    "openAria": "Open short link"
+  },
+  "Advanced": {
+    "toggle": "Advanced options",
+    "customSlug": "Custom slug",
+    "customSlugPlaceholder": "e.g. summer-sale",
+    "expiry": "Expires after",
+    "expiryNone": "Never",
+    "expiry1d": "1 day",
+    "expiry7d": "7 days",
+    "expiry30d": "30 days",
+    "maxClicks": "Click limit",
+    "maxClicksPlaceholder": "Unlimited",
+    "password": "Password protection",
+    "passwordPlaceholder": "Leave blank if not needed",
+    "safePreview": "Show a safety warning page before redirecting",
+    "utm": "UTM tracking"
+  },
+  "Bulk": {
+    "label": "Paste multiple links — one per line",
+    "placeholder": "https://example.com/link-1\nhttps://example.com/link-2\n...",
+    "submit": "Shorten all",
+    "submitting": "Shortening…",
+    "emptyError": "Enter at least one link (one per line).",
+    "invalidError": "{count, plural, one {# line isn't a valid URL.} other {# lines aren't valid URLs.}}",
+    "successCount": "Succeeded {success}/{total}",
+    "exportCsv": "Export CSV",
+    "rowError": "Error",
+    "connectionError": "Connection error"
+  },
+  "Qr": {
+    "contentLabel": "QR code content",
+    "contentPlaceholder": "Enter any link or text…",
+    "colorLabel": "Code color",
+    "bgLabel": "Background",
+    "errorLevel": "Error correction",
+    "levelLow": "Low",
+    "levelMedium": "Medium",
+    "levelHigh": "High",
+    "levelMax": "Max",
+    "logoLabel": "Center logo (optional)",
+    "uploadLogo": "Upload logo",
+    "changeLogo": "Change logo",
+    "removeLogo": "Remove",
+    "logoAlt": "Selected logo",
+    "previewAlt": "QR code generated from your content",
+    "placeholder": "Your QR code will appear here",
+    "copyContent": "Copy content",
+    "colorPickerAria": "{label} - color picker"
+  },
+  "Login": {
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "emailPlaceholder": "you@example.com",
+    "invalidInput": "Please enter a valid email and password.",
+    "invalidCredentials": "Incorrect email or password.",
+    "submit": "Sign in",
+    "submitting": "Signing in…"
+  },
+  "Register": {
+    "nameLabel": "Display name",
+    "namePlaceholder": "Your name (optional)",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "emailPlaceholder": "you@example.com",
+    "passwordPlaceholder": "At least {min} characters",
+    "submit": "Sign up",
+    "submitting": "Creating account…",
+    "genericError": "Sign-up failed, please try again."
+  },
+  "Profile": {
+    "metaTitle": "My profile — Linkora",
+    "joined": "Joined {date}",
+    "totalLinks": "Total links",
+    "totalClicks": "Total clicks",
+    "bioHeading": "Link-in-bio page",
+    "historyHeading": "Shortened link history"
+  },
+  "BioSettings": {
+    "usernameLabel": "Bio page username",
+    "usernamePlaceholder": "yourname",
+    "bioLabel": "About",
+    "bioPlaceholder": "A few words about you…",
+    "save": "Save bio page",
+    "saving": "Saving…",
+    "saved": "Your bio page has been saved.",
+    "genericError": "Something went wrong.",
+    "notLoggedIn": "You're not signed in.",
+    "invalidUsername": "Username must be 3–32 letters, digits, hyphens or underscores.",
+    "usernameTaken": "That username is already taken."
+  },
+  "LinkHistory": {
+    "empty": "You haven't shortened any links yet. Create your first one on the home page!",
+    "openAria": "Open link",
+    "deleteAria": "Delete link",
+    "deleteConfirmAria": "Click again to delete",
+    "deleteConfirm": "Delete?",
+    "clicks": "{count, plural, one {# click} other {# clicks}}",
+    "viewStats": "View stats",
+    "onBio": "★ On bio",
+    "addToBio": "☆ Add to bio"
+  },
+  "LinkBadges": {
+    "expired": "Expired",
+    "limitReached": "Limit reached",
+    "password": "🔒 Password",
+    "preview": "🛡️ Preview",
+    "onBio": "On bio"
+  },
+  "Validation": {
+    "invalidData": "Invalid request data.",
+    "invalidUrl": "This link isn't valid. Please enter a complete URL.",
+    "invalidEmail": "Invalid email address.",
+    "minPassword": "Password must be at least {min} characters.",
+    "invalidSlug": "Custom slug must be 3–32 letters, digits, hyphens or underscores.",
+    "slugTaken": "That slug is already taken, please pick another.",
+    "invalidExpiry": "The expiry time is invalid.",
+    "invalidMaxClicks": "The click limit must be a positive integer."
+  },
+  "Api": {
+    "linkNotFound": "This link doesn't exist.",
+    "linkExpiredOrLimited": "This link has expired or reached its limit.",
+    "wrongPassword": "Incorrect password.",
+    "emailTaken": "This email is already registered."
+  },
+  "LinkStatus": {
+    "expiredTitle": "Link has expired",
+    "expiredMessage": "This link has passed its expiration date and is no longer active.",
+    "limitReachedTitle": "Link has reached its limit",
+    "limitReachedMessage": "This link has reached its maximum allowed number of clicks.",
+    "notFoundTitle": "Link not found",
+    "notFoundMessage": "This short link doesn't exist or has been deleted.",
+    "expiredOrLimitedTitle": "Link is no longer active",
+    "expiredOrLimitedMessage": "This link has expired or reached its click limit.",
+    "backHome": "Back to home"
+  },
+  "Preview": {
+    "heading": "You're about to leave Linkora",
+    "description": "Check the destination before continuing to stay safe.",
+    "destinationLabel": "Destination",
+    "continueButton": "Continue to this page"
+  },
+  "Protected": {
+    "heading": "Protected link",
+    "description": "Enter the password to access this link."
+  },
+  "Unlock": {
+    "passwordPlaceholder": "Enter the link password",
+    "submit": "Unlock & continue",
+    "submitting": "Unlocking…",
+    "genericError": "Could not unlock the link.",
+    "connectionError": "Connection error, please try again."
+  },
+  "Meta": {
+    "title": "Linkora — URL Shortener & QR Code Generator",
+    "description": "Shorten long URLs and generate beautiful QR codes with a modern Glassmorphism interface.",
+    "loginTitle": "Sign in — Linkora",
+    "registerTitle": "Sign up — Linkora",
+    "statsTitle": "Link stats — Linkora",
+    "notFoundTitle": "Not found — Linkora"
+  },
+  "Auth": {
+    "loginHeading": "Sign in",
+    "loginSubtitle": "Welcome back to Linkora.",
+    "noAccount": "Don't have an account?",
+    "signUpNow": "Sign up now",
+    "registerHeading": "Create an account",
+    "registerSubtitle": "Sign up to save and manage your links.",
+    "hasAccount": "Already have an account?",
+    "signInNow": "Sign in"
+  },
+  "Analytics": {
+    "empty": "No clicks yet. Share your link to start collecting data!",
+    "chartTitle": "Clicks in the last 14 days",
+    "deviceTitle": "Device",
+    "refererTitle": "Source",
+    "countryTitle": "Country",
+    "noData": "No data",
+    "fallbackDevice": "other",
+    "fallbackDirect": "Direct",
+    "fallbackUnknown": "Unknown"
+  },
+  "Stats": {
+    "backToProfile": "← Back to profile",
+    "totalClicks": "Total clicks",
+    "limit": "Limit",
+    "createdAt": "Created",
+    "expiresAt": "Expires",
+    "openLink": "Open link"
+  },
+  "Bio": {
+    "noLinks": "No links pinned yet.",
+    "footer": "Create your bio page with",
+    "footerLink": "Linkora"
+  },
+  "CopyButtons": {
+    "copyLabel": "Copy",
+    "copied": "Copied!",
+    "copyImageIdle": "Copy image",
+    "copyImageCopying": "Copying…",
+    "copyImageCopied": "Image copied!",
+    "copyImageError": "Could not copy"
+  }
+}

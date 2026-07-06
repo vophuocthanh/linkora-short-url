@@ -1,0 +1,235 @@
+{
+  "Header": {
+    "badge": "Rút gọn link & tạo QR trong một nốt nhạc",
+    "tagline": "Biến những đường link dài dòng thành URL gọn gàng, hoặc tạo mã QR sắc nét — nhanh, đẹp, miễn phí."
+  },
+  "Footer": {
+    "credit": "Cùng biến mọi link thành khoảnh khắc"
+  },
+  "AuthNav": {
+    "signIn": "Đăng nhập",
+    "signUp": "Đăng ký",
+    "signOut": "Đăng xuất"
+  },
+  "LocaleSwitcher": {
+    "label": "Ngôn ngữ"
+  },
+  "Tabs": {
+    "shorten": "Rút gọn",
+    "bulk": "Hàng loạt",
+    "qrcode": "QR Code"
+  },
+  "Shortener": {
+    "inputLabel": "Dán đường link cần rút gọn",
+    "placeholder": "https://example.com/duong-link-rat-dai...",
+    "submit": "Rút gọn",
+    "submitting": "Đang xử lý",
+    "genericError": "Không thể rút gọn link, vui lòng thử lại.",
+    "connectionError": "Có lỗi kết nối, vui lòng thử lại.",
+    "resultTitle": "Link đã được rút gọn",
+    "createQrAria": "Tạo mã QR cho link này",
+    "openAria": "Mở link ngắn"
+  },
+  "Advanced": {
+    "toggle": "Tuỳ chọn nâng cao",
+    "customSlug": "Slug tuỳ chỉnh",
+    "customSlugPlaceholder": "vd: khuyen-mai-tet",
+    "expiry": "Hết hạn sau",
+    "expiryNone": "Không",
+    "expiry1d": "1 ngày",
+    "expiry7d": "7 ngày",
+    "expiry30d": "30 ngày",
+    "maxClicks": "Giới hạn lượt click",
+    "maxClicksPlaceholder": "Không giới hạn",
+    "password": "Mật khẩu bảo vệ",
+    "passwordPlaceholder": "Để trống nếu không cần",
+    "safePreview": "Hiện trang cảnh báo an toàn trước khi chuyển hướng",
+    "utm": "UTM tracking"
+  },
+  "Bulk": {
+    "label": "Dán nhiều đường link — mỗi dòng một link",
+    "placeholder": "https://example.com/link-1\nhttps://example.com/link-2\n...",
+    "submit": "Rút gọn tất cả",
+    "submitting": "Đang rút gọn",
+    "emptyError": "Hãy nhập ít nhất một đường link (mỗi dòng một link).",
+    "invalidError": "Có {count} dòng chưa phải URL hợp lệ.",
+    "successCount": "Thành công {success}/{total}",
+    "exportCsv": "Xuất CSV",
+    "rowError": "Lỗi",
+    "connectionError": "Lỗi kết nối"
+  },
+  "Qr": {
+    "contentLabel": "Nội dung mã QR",
+    "contentPlaceholder": "Nhập link hoặc văn bản bất kỳ...",
+    "colorLabel": "Màu mã",
+    "bgLabel": "Màu nền",
+    "errorLevel": "Độ chống lỗi",
+    "levelLow": "Thấp",
+    "levelMedium": "Vừa",
+    "levelHigh": "Cao",
+    "levelMax": "Tối đa",
+    "logoLabel": "Logo ở giữa (tuỳ chọn)",
+    "uploadLogo": "Tải logo lên",
+    "changeLogo": "Đổi logo",
+    "removeLogo": "Xoá",
+    "logoAlt": "Logo đã chọn",
+    "previewAlt": "Mã QR được tạo từ nội dung của bạn",
+    "placeholder": "Mã QR sẽ hiển thị ở đây",
+    "copyContent": "Copy nội dung",
+    "colorPickerAria": "{label} - bảng chọn màu"
+  },
+  "Login": {
+    "emailLabel": "Email",
+    "passwordLabel": "Mật khẩu",
+    "emailPlaceholder": "ban@example.com",
+    "invalidInput": "Vui lòng nhập email và mật khẩu hợp lệ.",
+    "invalidCredentials": "Email hoặc mật khẩu không đúng.",
+    "submit": "Đăng nhập",
+    "submitting": "Đang đăng nhập"
+  },
+  "Register": {
+    "nameLabel": "Tên hiển thị",
+    "namePlaceholder": "Tên của bạn (tuỳ chọn)",
+    "emailLabel": "Email",
+    "passwordLabel": "Mật khẩu",
+    "emailPlaceholder": "ban@example.com",
+    "passwordPlaceholder": "Tối thiểu {min} ký tự",
+    "submit": "Đăng ký",
+    "submitting": "Đang tạo tài khoản",
+    "genericError": "Đăng ký thất bại, vui lòng thử lại."
+  },
+  "Profile": {
+    "metaTitle": "Hồ sơ của tôi — Linkora",
+    "joined": "Tham gia từ {date}",
+    "totalLinks": "Tổng số link",
+    "totalClicks": "Tổng lượt click",
+    "bioHeading": "Trang link-in-bio",
+    "historyHeading": "Lịch sử link đã rút gọn"
+  },
+  "BioSettings": {
+    "usernameLabel": "Username trang bio",
+    "usernamePlaceholder": "tenban",
+    "bioLabel": "Giới thiệu",
+    "bioPlaceholder": "Đôi dòng về bạn...",
+    "save": "Lưu trang bio",
+    "saving": "Đang lưu",
+    "saved": "Đã lưu trang bio của bạn.",
+    "genericError": "Có lỗi xảy ra.",
+    "notLoggedIn": "Bạn chưa đăng nhập.",
+    "invalidUsername": "Username chỉ gồm 3–32 ký tự chữ, số, gạch ngang hoặc gạch dưới.",
+    "usernameTaken": "Username này đã có người dùng."
+  },
+  "LinkHistory": {
+    "empty": "Bạn chưa rút gọn link nào. Hãy tạo link đầu tiên ở trang chủ!",
+    "openAria": "Mở link",
+    "deleteAria": "Xoá link",
+    "deleteConfirmAria": "Bấm lần nữa để xoá",
+    "deleteConfirm": "Xoá?",
+    "clicks": "{count} click",
+    "viewStats": "Xem thống kê",
+    "onBio": "★ Trên bio",
+    "addToBio": "☆ Thêm vào bio"
+  },
+  "LinkBadges": {
+    "expired": "Hết hạn",
+    "limitReached": "Đạt giới hạn",
+    "password": "🔒 Mật khẩu",
+    "preview": "🛡️ Preview",
+    "onBio": "Trên bio"
+  },
+  "Validation": {
+    "invalidData": "Dữ liệu không hợp lệ.",
+    "invalidUrl": "Đường link chưa hợp lệ. Hãy nhập một URL đầy đủ.",
+    "invalidEmail": "Email không hợp lệ.",
+    "minPassword": "Mật khẩu cần tối thiểu {min} ký tự.",
+    "invalidSlug": "Slug tùy chỉnh chỉ gồm 3–32 ký tự chữ, số, gạch ngang hoặc gạch dưới.",
+    "slugTaken": "Slug này đã có người dùng, hãy chọn slug khác.",
+    "invalidExpiry": "Thời điểm hết hạn không hợp lệ.",
+    "invalidMaxClicks": "Giới hạn lượt click phải là số nguyên dương."
+  },
+  "Api": {
+    "linkNotFound": "Link không tồn tại.",
+    "linkExpiredOrLimited": "Link đã hết hạn hoặc đạt giới hạn.",
+    "wrongPassword": "Mật khẩu không đúng.",
+    "emailTaken": "Email này đã được đăng ký."
+  },
+  "LinkStatus": {
+    "expiredTitle": "Link đã hết hạn",
+    "expiredMessage": "Đường link này đã quá thời hạn sử dụng và không còn hoạt động.",
+    "limitReachedTitle": "Link đã đạt giới hạn",
+    "limitReachedMessage": "Đường link này đã đạt số lượt click tối đa cho phép.",
+    "notFoundTitle": "Không tìm thấy link",
+    "notFoundMessage": "Đường link ngắn này không tồn tại hoặc đã bị xoá.",
+    "expiredOrLimitedTitle": "Link không còn hoạt động",
+    "expiredOrLimitedMessage": "Đường link này đã hết hạn hoặc đạt giới hạn lượt click.",
+    "backHome": "Về trang chủ"
+  },
+  "Preview": {
+    "heading": "Bạn sắp rời khỏi Linkora",
+    "description": "Hãy kiểm tra điểm đến trước khi tiếp tục để đảm bảo an toàn.",
+    "destinationLabel": "Điểm đến",
+    "continueButton": "Tiếp tục tới trang này"
+  },
+  "Protected": {
+    "heading": "Link được bảo vệ",
+    "description": "Nhập mật khẩu để truy cập đường link này."
+  },
+  "Unlock": {
+    "passwordPlaceholder": "Nhập mật khẩu của link",
+    "submit": "Mở khoá & tiếp tục",
+    "submitting": "Đang mở khoá",
+    "genericError": "Không thể mở khoá link.",
+    "connectionError": "Có lỗi kết nối, vui lòng thử lại."
+  },
+  "Meta": {
+    "title": "Linkora — Rút gọn URL & Tạo mã QR",
+    "description": "Rút gọn đường link dài và tạo mã QR đẹp mắt, nhanh chóng với giao diện Glassmorphism hiện đại.",
+    "loginTitle": "Đăng nhập — Linkora",
+    "registerTitle": "Đăng ký — Linkora",
+    "statsTitle": "Thống kê link — Linkora",
+    "notFoundTitle": "Không tìm thấy — Linkora"
+  },
+  "Auth": {
+    "loginHeading": "Đăng nhập",
+    "loginSubtitle": "Chào mừng bạn quay lại Linkora.",
+    "noAccount": "Chưa có tài khoản?",
+    "signUpNow": "Đăng ký ngay",
+    "registerHeading": "Tạo tài khoản",
+    "registerSubtitle": "Đăng ký để lưu và quản lý link của bạn.",
+    "hasAccount": "Đã có tài khoản?",
+    "signInNow": "Đăng nhập"
+  },
+  "Analytics": {
+    "empty": "Chưa có lượt click nào. Chia sẻ link để bắt đầu thu thập dữ liệu!",
+    "chartTitle": "Lượt click 14 ngày gần nhất",
+    "deviceTitle": "Thiết bị",
+    "refererTitle": "Nguồn",
+    "countryTitle": "Quốc gia",
+    "noData": "Không có dữ liệu",
+    "fallbackDevice": "khác",
+    "fallbackDirect": "Trực tiếp",
+    "fallbackUnknown": "Không rõ"
+  },
+  "Stats": {
+    "backToProfile": "← Về hồ sơ",
+    "totalClicks": "Tổng click",
+    "limit": "Giới hạn",
+    "createdAt": "Tạo ngày",
+    "expiresAt": "Hết hạn",
+    "openLink": "Mở link"
+  },
+  "Bio": {
+    "noLinks": "Chưa có link nào được ghim.",
+    "notFoundTitle": "Không tìm thấy — Linkora",
+    "footer": "Tạo trang bio của bạn với",
+    "footerLink": "Linkora"
+  },
+  "CopyButtons": {
+    "copyLabel": "Copy",
+    "copied": "Copied!",
+    "copyImageIdle": "Copy ảnh",
+    "copyImageCopying": "Đang copy…",
+    "copyImageCopied": "Đã copy ảnh!",
+    "copyImageError": "Không copy được"
+  }
+}
