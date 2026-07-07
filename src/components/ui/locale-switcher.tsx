@@ -30,9 +30,9 @@ export function LocaleSwitcher() {
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-label={t("label")}
-        className="inline-flex items-center gap-1.5 rounded-xl border border-white/12 bg-white/5 px-2.5 py-1.5 text-sm text-white/70 backdrop-blur transition-colors hover:text-white disabled:opacity-60"
+        className="inline-flex items-center gap-1.5 rounded-xl border border-foreground/12 bg-foreground/5 px-2.5 py-1.5 text-sm text-foreground/70 backdrop-blur transition-colors hover:text-foreground disabled:opacity-60"
       >
-        <GlobeIcon className="size-4 text-white/45" />
+        <GlobeIcon className="size-4 text-foreground/45" />
         <span>{localeDetails[activeLocale].flag}</span>
         <span className="hidden sm:inline">
           {localeDetails[activeLocale].label}
@@ -62,8 +62,8 @@ export function LocaleSwitcher() {
                   className={cn(
                     "flex w-full items-center gap-2.5 rounded-lg px-2.5 py-1.5 text-left text-sm transition-colors",
                     locale === activeLocale
-                      ? "bg-white/10 text-white"
-                      : "text-white/70 hover:bg-white/5 hover:text-white",
+                      ? "bg-foreground/10 text-foreground"
+                      : "text-foreground/70 hover:bg-foreground/5 hover:text-foreground",
                   )}
                 >
                   <span>{localeDetails[locale].flag}</span>

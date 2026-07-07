@@ -21,11 +21,11 @@ export function AdvancedOptions({ value, onChange }: AdvancedOptionsProps) {
   }
 
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/3">
+    <div className="rounded-2xl border border-foreground/10 bg-foreground/3">
       <button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
-        className="flex w-full items-center justify-between px-4 py-3 text-sm font-medium text-white/70 transition-colors hover:text-white"
+        className="flex w-full items-center justify-between px-4 py-3 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
       >
         {t("toggle")}
         <span className={cn("transition-transform", open && "rotate-180")}>
@@ -34,7 +34,7 @@ export function AdvancedOptions({ value, onChange }: AdvancedOptionsProps) {
       </button>
 
       {open && (
-        <div className="flex flex-col gap-4 border-t border-white/10 p-4">
+        <div className="flex flex-col gap-4 border-t border-foreground/10 p-4">
           <Field label={t("customSlug")}>
             <GlassInput
               type="text"
@@ -46,7 +46,7 @@ export function AdvancedOptions({ value, onChange }: AdvancedOptionsProps) {
 
           <div className="grid gap-4 sm:grid-cols-2">
             <Field label={t("expiry")}>
-              <div className="grid grid-cols-4 gap-1.5 rounded-2xl border border-white/10 bg-white/5 p-1.5">
+              <div className="grid grid-cols-4 gap-1.5 rounded-2xl border border-foreground/10 bg-foreground/5 p-1.5">
                 {EXPIRY_CHOICES.map((choice) => (
                   <button
                     key={choice}
@@ -56,7 +56,7 @@ export function AdvancedOptions({ value, onChange }: AdvancedOptionsProps) {
                       "h-9 rounded-xl text-xs font-semibold transition-all duration-200",
                       value.expiry === choice
                         ? "bg-linear-to-r from-brand-500 to-accent-500 text-white"
-                        : "text-white/55 hover:text-white/85",
+                        : "text-foreground/55 hover:text-foreground/85",
                     )}
                   >
                     {t(EXPIRY_LABEL_KEY[choice])}
@@ -87,7 +87,7 @@ export function AdvancedOptions({ value, onChange }: AdvancedOptionsProps) {
             />
           </Field>
 
-          <label className="flex items-center gap-3 text-sm text-white/70">
+          <label className="flex items-center gap-3 text-sm text-foreground/70">
             <input
               type="checkbox"
               checked={value.safePreview}
@@ -98,7 +98,7 @@ export function AdvancedOptions({ value, onChange }: AdvancedOptionsProps) {
           </label>
 
           <div className="flex flex-col gap-2">
-            <span className="text-sm font-medium text-white/70">
+            <span className="text-sm font-medium text-foreground/70">
               {t("utm")}
             </span>
             <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
@@ -130,7 +130,7 @@ function Field({
 }) {
   return (
     <label className="flex flex-col gap-2">
-      <span className="text-sm font-medium text-white/70">{label}</span>
+      <span className="text-sm font-medium text-foreground/70">{label}</span>
       {children}
     </label>
   );

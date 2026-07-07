@@ -36,7 +36,7 @@ export function BioSettings({ username, bio, origin }: BioSettingsProps) {
   return (
     <div className="flex flex-col gap-4">
       <label className="flex flex-col gap-2">
-        <span className="text-sm font-medium text-white/70">
+        <span className="text-sm font-medium text-foreground/70">
           {t("usernameLabel")}
         </span>
         <GlassInput
@@ -58,7 +58,7 @@ export function BioSettings({ username, bio, origin }: BioSettingsProps) {
       </label>
 
       <label className="flex flex-col gap-2">
-        <span className="text-sm font-medium text-white/70">
+        <span className="text-sm font-medium text-foreground/70">
           {t("bioLabel")}
         </span>
         <textarea
@@ -66,7 +66,7 @@ export function BioSettings({ username, bio, origin }: BioSettingsProps) {
           placeholder={t("bioPlaceholder")}
           value={text}
           onChange={(e) => setText(e.target.value)}
-          className="w-full resize-y rounded-2xl border border-white/12 bg-white/5 p-3 text-sm text-white placeholder:text-white/35 outline-none transition-colors focus:border-brand-400/70 focus:bg-white/10"
+          className="w-full resize-y rounded-2xl border border-foreground/12 bg-foreground/5 p-3 text-sm text-foreground placeholder:text-foreground/35 outline-none transition-colors focus:border-brand-400/70 focus:bg-foreground/10"
         />
       </label>
 

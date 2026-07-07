@@ -50,17 +50,17 @@ export default async function BioPage({ params }: PageProps) {
           <span className="flex size-20 items-center justify-center rounded-3xl bg-linear-to-br from-brand-500 to-accent-500 text-3xl font-bold text-white shadow-lg shadow-brand-500/30">
             {initial}
           </span>
-          <h1 className="mt-4 text-2xl font-bold text-white">{displayName}</h1>
-          <p className="text-sm text-white/50">@{profile.username}</p>
+          <h1 className="mt-4 text-2xl font-bold text-foreground">{displayName}</h1>
+          <p className="text-sm text-foreground/50">@{profile.username}</p>
           {profile.bio && (
-            <p className="mt-3 max-w-sm text-balance text-sm leading-relaxed text-white/70">
+            <p className="mt-3 max-w-sm text-balance text-sm leading-relaxed text-foreground/70">
               {profile.bio}
             </p>
           )}
         </div>
 
         {profile.links.length === 0 ? (
-          <p className="text-sm text-white/40">{t("noLinks")}</p>
+          <p className="text-sm text-foreground/40">{t("noLinks")}</p>
         ) : (
           <ul className="flex w-full flex-col gap-3">
             {profile.links.map((link) => (
@@ -69,19 +69,19 @@ export default async function BioPage({ params }: PageProps) {
                   href={`/${link.slug}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="glass-surface flex items-center justify-between gap-3 rounded-2xl px-5 py-4 text-white transition-all duration-200 hover:bg-white/10 active:scale-[0.99]"
+                  className="glass-surface flex items-center justify-between gap-3 rounded-2xl px-5 py-4 text-foreground transition-all duration-200 hover:bg-foreground/10 active:scale-[0.99]"
                 >
                   <span className="truncate font-medium">
                     {linkLabel(link.title, link.originalUrl)}
                   </span>
-                  <ExternalLinkIcon className="size-4 shrink-0 text-white/50" />
+                  <ExternalLinkIcon className="size-4 shrink-0 text-foreground/50" />
                 </a>
               </li>
             ))}
           </ul>
         )}
 
-        <footer className="mt-4 text-xs text-white/35">
+        <footer className="mt-4 text-xs text-foreground/35">
           {t("footer")}{" "}
           <Link href="/" className="text-brand-400 hover:text-brand-300">
             Linkora

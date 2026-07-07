@@ -16,15 +16,15 @@ export default async function LoginPage() {
   return (
     <GlassCard as="section" className="animate-fade-up p-6 sm:p-8">
       <header className="mb-6 text-center">
-        <h1 className="text-2xl font-bold text-white">{t("loginHeading")}</h1>
-        <p className="mt-2 text-sm text-white/55">{t("loginSubtitle")}</p>
+        <h1 className="text-2xl font-bold text-foreground">{t("loginHeading")}</h1>
+        <p className="mt-2 text-sm text-foreground/55">{t("loginSubtitle")}</p>
       </header>
 
       <Suspense fallback={null}>
         <LoginForm />
       </Suspense>
 
-      <p className="mt-6 text-center text-sm text-white/55">
+      <p className="mt-6 text-center text-sm text-foreground/55">
         {t("noAccount")}{" "}
         <Link
           href="/register"

@@ -56,7 +56,7 @@ export function QrCodePreview({ options }: QrCodePreviewProps) {
 
   return (
     <div className="flex flex-col items-center gap-5">
-      <div className="relative flex aspect-square w-full max-w-60 items-center justify-center overflow-hidden rounded-3xl border border-white/12 bg-white/5 p-4">
+      <div className="relative flex aspect-square w-full max-w-60 items-center justify-center overflow-hidden rounded-3xl border border-foreground/12 bg-foreground/5 p-4">
         {hasValue && pngUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -65,9 +65,9 @@ export function QrCodePreview({ options }: QrCodePreviewProps) {
             className="h-full w-full rounded-xl object-contain"
           />
         ) : hasValue ? (
-          <span className="size-8 animate-spin-slow rounded-full border-2 border-white/30 border-t-white" />
+          <span className="size-8 animate-spin-slow rounded-full border-2 border-foreground/30 border-t-foreground" />
         ) : (
-          <div className="flex flex-col items-center gap-3 text-center text-white/35">
+          <div className="flex flex-col items-center gap-3 text-center text-foreground/35">
             <QrIcon className="size-10" />
             <p className="text-sm">{t("placeholder")}</p>
           </div>

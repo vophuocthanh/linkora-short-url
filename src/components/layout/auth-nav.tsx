@@ -14,7 +14,7 @@ export function AuthNav() {
   const { data: session, status } = useSession();
 
   if (status === "loading") {
-    return <div className="h-9 w-32 animate-pulse rounded-xl bg-white/5" />;
+    return <div className="h-9 w-32 animate-pulse rounded-xl bg-foreground/5" />;
   }
 
   if (session?.user) {
@@ -22,9 +22,9 @@ export function AuthNav() {
       <div className="flex items-center gap-2.5">
         <Link
           href="/profile"
-          className="inline-flex items-center gap-1.5 rounded-xl px-2 py-1 text-sm text-white/70 transition-colors hover:text-white"
+          className="inline-flex items-center gap-1.5 rounded-xl px-2 py-1 text-sm text-foreground/70 transition-colors hover:text-foreground"
         >
-          <UserIcon className="size-4 text-white/45" />
+          <UserIcon className="size-4 text-foreground/45" />
           <span className="hidden max-w-40 truncate sm:inline">
             {session.user.name ?? session.user.email}
           </span>

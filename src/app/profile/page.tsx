@@ -64,9 +64,9 @@ export default async function ProfilePage() {
         <header className="flex items-center justify-between">
           <Link
             href="/"
-            className="text-lg font-bold tracking-tight text-white/90 transition-colors hover:text-white"
+            className="text-lg font-bold tracking-tight text-foreground/90 transition-colors hover:text-foreground"
           >
-            <span className="bg-linear-to-r from-white via-brand-400 to-accent-400 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-foreground via-brand-400 to-accent-400 bg-clip-text text-transparent">
               Link
             </span>
             ora
@@ -85,7 +85,7 @@ export default async function ProfilePage() {
         </GlassCard>
 
         <GlassCard as="section" className="animate-fade-up p-6 sm:p-7">
-          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-white/60">
+          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-foreground/60">
             {t("bioHeading")}
           </h2>
           <BioSettings
@@ -96,7 +96,7 @@ export default async function ProfilePage() {
         </GlassCard>
 
         <section className="animate-fade-up [animation-delay:80ms]">
-          <h2 className="mb-3 px-1 text-sm font-semibold uppercase tracking-wide text-white/60">
+          <h2 className="mb-3 px-1 text-sm font-semibold uppercase tracking-wide text-foreground/60">
             {t("historyHeading")}
           </h2>
           <LinkHistory links={historyLinks} />

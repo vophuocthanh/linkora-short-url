@@ -3,6 +3,7 @@ import { AppHeader } from "@/components/layout/app-header";
 import { AppFooter } from "@/components/layout/app-footer";
 import { AuthNav } from "@/components/layout/auth-nav";
 import { LocaleSwitcher } from "@/components/ui/locale-switcher";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { ToolPanel } from "@/components/features/tool-panel";
 
 export default function HomePage() {
@@ -11,6 +12,7 @@ export default function HomePage() {
       <AuroraBackground />
 
       <div className="absolute right-4 top-4 z-10 flex items-center gap-2 sm:right-6 sm:top-6">
+        <ThemeToggle />
         <LocaleSwitcher />
         <AuthNav />
       </div>

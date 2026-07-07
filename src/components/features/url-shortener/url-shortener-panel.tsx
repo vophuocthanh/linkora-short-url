@@ -75,7 +75,7 @@ export function UrlShortenerPanel({
   return (
     <div className="flex flex-col gap-5">
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-        <label htmlFor="long-url" className="text-sm font-medium text-white/70">
+        <label htmlFor="long-url" className="text-sm font-medium text-foreground/70">
           {t("inputLabel")}
         </label>
 

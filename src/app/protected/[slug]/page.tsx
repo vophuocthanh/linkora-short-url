@@ -37,11 +37,11 @@ export default async function ProtectedPage({
 
       <GlassCard as="section" className="animate-fade-up w-full max-w-md p-8">
         <div className="mb-5 text-center">
-          <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-2xl border border-white/12 bg-white/5 text-3xl">
+          <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-2xl border border-foreground/12 bg-foreground/5 text-3xl">
             🔒
           </div>
-          <h1 className="text-2xl font-bold text-white">{t("Protected.heading")}</h1>
-          <p className="mt-2 text-sm text-white/60">
+          <h1 className="text-2xl font-bold text-foreground">{t("Protected.heading")}</h1>
+          <p className="mt-2 text-sm text-foreground/60">
             {t("Protected.description")}
           </p>
         </div>

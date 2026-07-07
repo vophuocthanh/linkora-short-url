@@ -49,7 +49,7 @@ export function LoginForm() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       <label className="flex flex-col gap-2">
-        <span className="text-sm font-medium text-white/70">
+        <span className="text-sm font-medium text-foreground/70">
           {t("emailLabel")}
         </span>
         <GlassInput
@@ -68,7 +68,7 @@ export function LoginForm() {
       </label>
 
       <label className="flex flex-col gap-2">
-        <span className="text-sm font-medium text-white/70">
+        <span className="text-sm font-medium text-foreground/70">
           {t("passwordLabel")}
         </span>
         <GlassInput

@@ -12,7 +12,7 @@ export function ShortUrlResult({ link, onCreateQr }: ShortUrlResultProps) {
   const t = useTranslations("Shortener");
 
   return (
-    <div className="animate-fade-up rounded-2xl border border-white/12 bg-white/5 p-4">
+    <div className="animate-fade-up rounded-2xl border border-foreground/12 bg-foreground/5 p-4">
       <p className="mb-3 flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-accent-400">
         <span className="size-1.5 rounded-full bg-accent-400" />
         {t("resultTitle")}
@@ -23,7 +23,7 @@ export function ShortUrlResult({ link, onCreateQr }: ShortUrlResultProps) {
           href={link.shortUrl}
           target="_blank"
           rel="noreferrer"
-          className="min-w-0 flex-1 truncate font-mono text-lg font-semibold text-white transition-colors hover:text-brand-400"
+          className="min-w-0 flex-1 truncate font-mono text-lg font-semibold text-foreground transition-colors hover:text-brand-400"
           title={link.shortUrl}
         >
           {link.shortUrl}
@@ -35,7 +35,7 @@ export function ShortUrlResult({ link, onCreateQr }: ShortUrlResultProps) {
             <button
               type="button"
               onClick={() => onCreateQr(link.shortUrl)}
-              className="inline-flex size-11 items-center justify-center rounded-2xl border border-white/12 bg-white/8 text-white/85 transition-all duration-200 hover:bg-white/14 hover:text-white active:scale-[0.98]"
+              className="inline-flex size-11 items-center justify-center rounded-2xl border border-foreground/12 bg-foreground/8 text-foreground/85 transition-all duration-200 hover:bg-foreground/14 hover:text-foreground active:scale-[0.98]"
               aria-label={t("createQrAria")}
             >
               <QrIcon className="size-4" />
@@ -45,7 +45,7 @@ export function ShortUrlResult({ link, onCreateQr }: ShortUrlResultProps) {
             href={link.shortUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex size-11 items-center justify-center rounded-2xl border border-white/12 bg-white/8 text-white/85 transition-all duration-200 hover:bg-white/14 hover:text-white active:scale-[0.98]"
+            className="inline-flex size-11 items-center justify-center rounded-2xl border border-foreground/12 bg-foreground/8 text-foreground/85 transition-all duration-200 hover:bg-foreground/14 hover:text-foreground active:scale-[0.98]"
             aria-label={t("openAria")}
           >
             <ExternalLinkIcon className="size-4" />
@@ -53,7 +53,7 @@ export function ShortUrlResult({ link, onCreateQr }: ShortUrlResultProps) {
         </div>
       </div>
 
-      <p className="mt-3 truncate text-xs text-white/40" title={link.originalUrl}>
+      <p className="mt-3 truncate text-xs text-foreground/40" title={link.originalUrl}>
         ↳ {link.originalUrl}
       </p>
     </div>

@@ -21,11 +21,11 @@ export function LinkStatusScreen({ title, message, icon, backLabel }: LinkStatus
         as="section"
         className="animate-fade-up w-full max-w-md p-8 text-center"
       >
-        <div className="mx-auto mb-5 flex size-16 items-center justify-center rounded-2xl border border-white/12 bg-white/5 text-3xl">
+        <div className="mx-auto mb-5 flex size-16 items-center justify-center rounded-2xl border border-foreground/12 bg-foreground/5 text-3xl">
           {icon ?? "🔗"}
         </div>
-        <h1 className="text-2xl font-bold text-white">{title}</h1>
-        <p className="mt-3 text-sm leading-relaxed text-white/60">{message}</p>
+        <h1 className="text-2xl font-bold text-foreground">{title}</h1>
+        <p className="mt-3 text-sm leading-relaxed text-foreground/60">{message}</p>
 
         <Link href="/" className="mt-7 inline-block">
           <GlassButton size="lg">{backLabel ?? "Back to home"}</GlassButton>

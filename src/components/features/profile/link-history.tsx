@@ -34,9 +34,9 @@ export function LinkHistory({ links }: { links: ProfileLink[] }) {
 
   if (links.length === 0) {
     return (
-      <div className="flex flex-col items-center gap-3 rounded-2xl border border-dashed border-white/12 bg-white/3 px-6 py-12 text-center">
-        <LinkIcon className="size-9 text-white/30" />
-        <p className="text-sm text-white/50">{t("empty")}</p>
+      <div className="flex flex-col items-center gap-3 rounded-2xl border border-dashed border-foreground/12 bg-foreground/3 px-6 py-12 text-center">
+        <LinkIcon className="size-9 text-foreground/30" />
+        <p className="text-sm text-foreground/50">{t("empty")}</p>
       </div>
     );
   }
@@ -64,19 +64,19 @@ function LinkHistoryItem({ link }: { link: ProfileLink }) {
   }
 
   return (
-    <li className="rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-white/15">
+    <li className="rounded-2xl border border-foreground/10 bg-foreground/5 p-4 transition-colors hover:border-foreground/15">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0 flex-1">
           <a
             href={link.shortUrl}
             target="_blank"
             rel="noreferrer"
-            className="block truncate font-mono text-[15px] font-semibold text-white transition-colors hover:text-brand-400"
+            className="block truncate font-mono text-[15px] font-semibold text-foreground transition-colors hover:text-brand-400"
           >
             /{link.slug}
           </a>
           <p
-            className="mt-1 truncate text-xs text-white/40"
+            className="mt-1 truncate text-xs text-foreground/40"
             title={link.originalUrl}
           >
             ↳ {link.originalUrl}
@@ -89,7 +89,7 @@ function LinkHistoryItem({ link }: { link: ProfileLink }) {
             href={link.shortUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex size-9 items-center justify-center rounded-xl border border-white/12 bg-white/8 text-white/85 transition-all duration-200 hover:bg-white/14 hover:text-white active:scale-[0.98]"
+            className="inline-flex size-9 items-center justify-center rounded-xl border border-foreground/12 bg-foreground/8 text-foreground/85 transition-all duration-200 hover:bg-foreground/14 hover:text-foreground active:scale-[0.98]"
             aria-label={t("openAria")}
           >
             <ExternalLinkIcon className="size-4" />
@@ -103,7 +103,7 @@ function LinkHistoryItem({ link }: { link: ProfileLink }) {
             className={`inline-flex h-9 items-center justify-center gap-1.5 rounded-xl border px-2.5 text-xs font-medium transition-all duration-200 active:scale-[0.98] disabled:opacity-50 ${
               confirming
                 ? "border-rose-400/40 bg-rose-500/15 text-rose-300"
-                : "border-white/12 bg-white/8 text-white/70 hover:bg-white/14 hover:text-white"
+                : "border-foreground/12 bg-foreground/8 text-foreground/70 hover:bg-foreground/14 hover:text-foreground"
             }`}
           >
             <TrashIcon className="size-4" />
@@ -112,7 +112,7 @@ function LinkHistoryItem({ link }: { link: ProfileLink }) {
         </div>
       </div>
 
-      <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-white/45">
+      <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-foreground/45">
         <span className="inline-flex items-center gap-1.5">
           <CursorClickIcon className="size-3.5" />
           {t("clicks", { count: link.clickCount })}
@@ -147,7 +147,7 @@ function BioToggle({ id, on }: { id: string; on: boolean }) {
       disabled={pending}
       onClick={() => startTransition(() => toggleBioLink(id))}
       className={`font-medium transition-colors disabled:opacity-50 ${
-        on ? "text-brand-300" : "text-white/45 hover:text-white/80"
+        on ? "text-brand-300" : "text-foreground/45 hover:text-foreground/80"
       }`}
     >
       {on ? t("onBio") : t("addToBio")}

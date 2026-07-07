@@ -1,8 +1,48 @@
 @import "tailwindcss";
 
-:root {
+/* ------------------------------------------------------------------ *
+ * Theme tokens
+ * Every surface reads from these variables, so flipping `data-theme`
+ * on <html> re-themes the whole app with no per-component overrides.
+ * `white` in class names maps to `foreground`, which flips per theme.
+ * ------------------------------------------------------------------ */
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+
   --background: #060814;
   --foreground: #eef1ff;
+
+  /* Frosted-glass surface */
+  --glass-from: rgba(255, 255, 255, 0.12);
+  --glass-to: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.16);
+  --glass-shadow: 0 8px 32px -12px rgba(4, 6, 20, 0.6);
+  --glass-inset: inset 0 1px 0 0 rgba(255, 255, 255, 0.22);
+
+  /* Ambient aurora backdrop */
+  --aurora-opacity: 1;
+  --aurora-vignette: rgba(6, 8, 20, 0.55);
+
+  --scrollbar-thumb: rgba(255, 255, 255, 0.18);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --background: #eef1fb;
+  --foreground: #0d1430;
+
+  --glass-from: rgba(255, 255, 255, 0.85);
+  --glass-to: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(13, 20, 48, 0.09);
+  --glass-shadow: 0 8px 32px -14px rgba(30, 40, 90, 0.22);
+  --glass-inset: inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
+
+  --aurora-opacity: 0.5;
+  --aurora-vignette: rgba(238, 241, 251, 0.55);
+
+  --scrollbar-thumb: rgba(13, 20, 48, 0.22);
 }
 
 @theme inline {
@@ -57,35 +97,28 @@
   }
 }
 
-html {
-  color-scheme: dark;
-}
-
 body {
   min-height: 100dvh;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-jakarta), "Segoe UI", system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* Frosted-glass surface used across the app */
 .glass-surface {
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, #ffffff 12%, transparent),
-    color-mix(in srgb, #ffffff 4%, transparent)
-  );
+  background: linear-gradient(135deg, var(--glass-from), var(--glass-to));
   backdrop-filter: blur(22px) saturate(140%);
   -webkit-backdrop-filter: blur(22px) saturate(140%);
-  border: 1px solid color-mix(in srgb, #ffffff 16%, transparent);
-  box-shadow:
-    0 8px 32px -12px rgba(4, 6, 20, 0.6),
-    inset 0 1px 0 0 color-mix(in srgb, #ffffff 22%, transparent);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), var(--glass-inset);
 }
 
 /* Thin, subtle scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
 }

@@ -21,7 +21,7 @@ export function LinkAnalytics({
 
   if (totalClicks === 0) {
     return (
-      <GlassCard className="p-8 text-center text-sm text-white/50">
+      <GlassCard className="p-8 text-center text-sm text-foreground/50">
         {t("empty")}
       </GlassCard>
     );
@@ -30,7 +30,7 @@ export function LinkAnalytics({
   return (
     <div className="flex flex-col gap-4">
       <GlassCard className="p-5 sm:p-6">
-        <h3 className="mb-4 text-sm font-semibold text-white/70">
+        <h3 className="mb-4 text-sm font-semibold text-foreground/70">
           {t("chartTitle")}
         </h3>
         <DailyChart data={daily} />
@@ -56,14 +56,14 @@ function DailyChart({ data }: { data: DailyBucket[] }) {
           className="group flex flex-1 flex-col items-center justify-end gap-1"
           title={`${bucket.label}: ${bucket.count}`}
         >
-          <span className="text-[10px] text-white/50 opacity-0 transition-opacity group-hover:opacity-100">
+          <span className="text-[10px] text-foreground/50 opacity-0 transition-opacity group-hover:opacity-100">
             {bucket.count}
           </span>
           <div
             className="w-full rounded-t bg-linear-to-t from-brand-500 to-accent-500 transition-all"
             style={{ height: `${(bucket.count / max) * 100}%`, minHeight: 2 }}
           />
-          <span className="text-[9px] text-white/35">{bucket.label}</span>
+          <span className="text-[9px] text-foreground/35">{bucket.label}</span>
         </div>
       ))}
     </div>
@@ -83,20 +83,20 @@ function BreakdownCard({
 
   return (
     <GlassCard className="p-5">
-      <h3 className="mb-3 text-sm font-semibold text-white/70">{title}</h3>
+      <h3 className="mb-3 text-sm font-semibold text-foreground/70">{title}</h3>
       {items.length === 0 ? (
-        <p className="text-xs text-white/40">{t("noData")}</p>
+        <p className="text-xs text-foreground/40">{t("noData")}</p>
       ) : (
         <ul className="flex flex-col gap-2.5">
           {items.map((item) => (
             <li key={item.key}>
               <div className="mb-1 flex items-center justify-between text-xs">
-                <span className="truncate text-white/75" title={item.key}>
+                <span className="truncate text-foreground/75" title={item.key}>
                   {item.key}
                 </span>
-                <span className="shrink-0 text-white/45">{item.count}</span>
+                <span className="shrink-0 text-foreground/45">{item.count}</span>
               </div>
-              <div className="h-1.5 overflow-hidden rounded-full bg-white/8">
+              <div className="h-1.5 overflow-hidden rounded-full bg-foreground/8">
                 <div
                   className="h-full rounded-full bg-linear-to-r from-brand-500 to-accent-500"
                   style={{ width: `${(item.count / total) * 100}%` }}

@@ -50,7 +50,7 @@ export function QrGeneratorPanel({ seedValue }: { seedValue?: string }) {
       {/* Controls */}
       <div className="flex flex-col gap-5">
         <div className="flex flex-col gap-3">
-          <label htmlFor="qr-value" className="text-sm font-medium text-white/70">
+          <label htmlFor="qr-value" className="text-sm font-medium text-foreground/70">
             {t("contentLabel")}
           </label>
           <GlassInput
@@ -77,10 +77,10 @@ export function QrGeneratorPanel({ seedValue }: { seedValue?: string }) {
         </div>
 
         <div className="flex flex-col gap-2">
-          <span className="text-sm font-medium text-white/70">
+          <span className="text-sm font-medium text-foreground/70">
             {t("errorLevel")}
           </span>
-          <div className="grid grid-cols-4 gap-1.5 rounded-2xl border border-white/10 bg-white/5 p-1.5">
+          <div className="grid grid-cols-4 gap-1.5 rounded-2xl border border-foreground/10 bg-foreground/5 p-1.5">
             {ERROR_LEVELS.map((level) => {
               const active = options.errorCorrection === level;
               return (
@@ -92,7 +92,7 @@ export function QrGeneratorPanel({ seedValue }: { seedValue?: string }) {
                     "h-9 rounded-xl text-xs font-semibold transition-all duration-200",
                     active
                       ? "bg-gradient-to-r from-brand-500 to-accent-500 text-white shadow shadow-brand-500/30"
-                      : "text-white/55 hover:text-white/85",
+                      : "text-foreground/55 hover:text-foreground/85",
                   )}
                 >
                   {t(LEVEL_LABEL_KEY[level])}
@@ -134,11 +134,11 @@ function LogoField({ value, onChange }: LogoFieldProps) {
 
   return (
     <div className="flex flex-col gap-2">
-      <span className="text-sm font-medium text-white/70">
+      <span className="text-sm font-medium text-foreground/70">
         {t("logoLabel")}
       </span>
       <div className="flex items-center gap-3">
-        <label className="inline-flex h-11 flex-1 cursor-pointer items-center justify-center gap-2 rounded-2xl border border-white/12 bg-white/5 text-sm font-medium text-white/80 transition-colors hover:bg-white/10">
+        <label className="inline-flex h-11 flex-1 cursor-pointer items-center justify-center gap-2 rounded-2xl border border-foreground/12 bg-foreground/5 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground/10">
           <ImageIcon className="size-4" />
           {value ? t("changeLogo") : t("uploadLogo")}
           <input
@@ -154,12 +154,12 @@ function LogoField({ value, onChange }: LogoFieldProps) {
             <img
               src={value}
               alt={t("logoAlt")}
-              className="size-11 rounded-xl border border-white/15 object-contain"
+              className="size-11 rounded-xl border border-foreground/15 object-contain"
             />
             <button
               type="button"
               onClick={() => onChange(null)}
-              className="text-sm text-white/50 transition-colors hover:text-rose-300"
+              className="text-sm text-foreground/50 transition-colors hover:text-rose-300"
             >
               {t("removeLogo")}
             </button>
@@ -182,17 +182,17 @@ function ColorField({ label, value, onChange }: ColorFieldProps) {
 
   return (
     <label className="flex flex-col gap-2">
-      <span className="text-sm font-medium text-white/70">{label}</span>
-      <div className="flex items-center gap-2 rounded-2xl border border-white/12 bg-white/5 p-1.5 pl-3">
+      <span className="text-sm font-medium text-foreground/70">{label}</span>
+      <div className="flex items-center gap-2 rounded-2xl border border-foreground/12 bg-foreground/5 p-1.5 pl-3">
         <span
-          className="size-7 shrink-0 rounded-lg border border-white/20"
+          className="size-7 shrink-0 rounded-lg border border-foreground/20"
           style={{ backgroundColor: value }}
         />
         <input
           type="text"
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="h-9 w-full min-w-0 bg-transparent font-mono text-sm text-white outline-none"
+          className="h-9 w-full min-w-0 bg-transparent font-mono text-sm text-foreground outline-none"
           aria-label={label}
         />
         <input

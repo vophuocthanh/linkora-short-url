@@ -14,6 +14,10 @@
   "LocaleSwitcher": {
     "label": "Ngôn ngữ"
   },
+  "ThemeToggle": {
+    "switchToLight": "Chuyển sang giao diện sáng",
+    "switchToDark": "Chuyển sang giao diện tối"
+  },
   "Tabs": {
     "shorten": "Rút gọn",
     "bulk": "Hàng loạt",

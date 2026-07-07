@@ -76,7 +76,7 @@ export default async function LinkAnalyticsPage({
       <div className="flex w-full max-w-2xl flex-col gap-6">
         <Link
           href="/profile"
-          className="text-sm text-white/55 transition-colors hover:text-white"
+          className="text-sm text-foreground/55 transition-colors hover:text-foreground"
         >
           {t("Stats.backToProfile")}
         </Link>
@@ -84,16 +84,16 @@ export default async function LinkAnalyticsPage({
         <GlassCard as="section" className="animate-fade-up p-6 sm:p-7">
           <div className="flex items-start justify-between gap-3">
             <div className="min-w-0">
-              <h1 className="truncate font-mono text-xl font-bold text-white">
+              <h1 className="truncate font-mono text-xl font-bold text-foreground">
                 /{link.slug}
               </h1>
               {link.title && (
-                <p className="mt-0.5 truncate text-sm text-white/70">
+                <p className="mt-0.5 truncate text-sm text-foreground/70">
                   {link.title}
                 </p>
               )}
               <p
-                className="mt-1 truncate text-xs text-white/40"
+                className="mt-1 truncate text-xs text-foreground/40"
                 title={link.originalUrl}
               >
                 ↳ {link.originalUrl}
@@ -105,7 +105,7 @@ export default async function LinkAnalyticsPage({
                 href={shortUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex size-9 items-center justify-center rounded-xl border border-white/12 bg-white/8 text-white/85 transition-all hover:bg-white/14 hover:text-white"
+                className="inline-flex size-9 items-center justify-center rounded-xl border border-foreground/12 bg-foreground/8 text-foreground/85 transition-all hover:bg-foreground/14 hover:text-foreground"
                 aria-label={t("Stats.openLink")}
               >
                 <ExternalLinkIcon className="size-4" />
@@ -119,15 +119,15 @@ export default async function LinkAnalyticsPage({
               <Stat label={t("Stats.limit")} value={link.maxClicks} />
             )}
             <div className="text-sm">
-              <p className="text-white/45">{t("Stats.createdAt")}</p>
-              <p className="font-semibold text-white">
+              <p className="text-foreground/45">{t("Stats.createdAt")}</p>
+              <p className="font-semibold text-foreground">
                 {formatDate(link.createdAt)}
               </p>
             </div>
             {link.expiresAt && (
               <div className="text-sm">
-                <p className="text-white/45">{t("Stats.expiresAt")}</p>
-                <p className="font-semibold text-white">
+                <p className="text-foreground/45">{t("Stats.expiresAt")}</p>
+                <p className="font-semibold text-foreground">
                   {formatDate(link.expiresAt)}
                 </p>
               </div>
@@ -159,8 +159,8 @@ export default async function LinkAnalyticsPage({
 function Stat({ label, value }: { label: string; value: number }) {
   return (
     <div className="text-sm">
-      <p className="text-white/45">{label}</p>
-      <p className="text-2xl font-bold text-white">{value}</p>
+      <p className="text-foreground/45">{label}</p>
+      <p className="text-2xl font-bold text-foreground">{value}</p>
     </div>
   );
 }

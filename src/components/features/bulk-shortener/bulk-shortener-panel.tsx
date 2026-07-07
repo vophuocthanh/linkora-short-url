@@ -102,7 +102,7 @@ export function BulkShortenerPanel() {
   return (
     <div className="flex flex-col gap-5">
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-        <label htmlFor="bulk-urls" className="text-sm font-medium text-white/70">
+        <label htmlFor="bulk-urls" className="text-sm font-medium text-foreground/70">
           {t("label")}
         </label>
         <textarea
@@ -114,7 +114,7 @@ export function BulkShortenerPanel() {
             setText(e.target.value);
             if (error) setError(null);
           }}
-          className="w-full resize-y rounded-2xl border border-white/12 bg-white/5 p-4 font-mono text-sm text-white placeholder:text-white/35 outline-none transition-colors focus:border-brand-400/70 focus:bg-white/10"
+          className="w-full resize-y rounded-2xl border border-foreground/12 bg-foreground/5 p-4 font-mono text-sm text-foreground placeholder:text-foreground/35 outline-none transition-colors focus:border-brand-400/70 focus:bg-foreground/10"
         />
         {error && <p className="text-sm text-rose-400">{error}</p>}
         <GlassButton type="submit" size="lg" loading={loading}>
@@ -125,7 +125,7 @@ export function BulkShortenerPanel() {
       {results.length > 0 && (
         <div className="flex flex-col gap-3">
           <div className="flex items-center justify-between">
-            <p className="text-sm text-white/60">
+            <p className="text-sm text-foreground/60">
               {t("successCount", {
                 success: successCount,
                 total: results.length,
@@ -141,14 +141,14 @@ export function BulkShortenerPanel() {
             {results.map((result, index) => (
               <li
                 key={index}
-                className="flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-3 py-2"
+                className="flex items-center justify-between gap-3 rounded-xl border border-foreground/10 bg-foreground/5 px-3 py-2"
               >
                 <div className="min-w-0 flex-1">
-                  <p className="truncate text-xs text-white/40" title={result.input}>
+                  <p className="truncate text-xs text-foreground/40" title={result.input}>
                     {result.input}
                   </p>
                   {result.shortUrl ? (
-                    <p className="truncate font-mono text-sm text-white">
+                    <p className="truncate font-mono text-sm text-foreground">
                       {result.shortUrl}
                     </p>
                   ) : (

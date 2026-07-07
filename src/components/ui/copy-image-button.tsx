@@ -40,7 +40,7 @@ export function CopyImageButton({
         status === "error" &&
         "border border-rose-400/40 bg-rose-500/15 text-rose-300",
         (status === "idle" || status === "copying") &&
-        "border border-white/12 bg-white/8 text-white/85 hover:bg-white/14 hover:text-white",
+        "border border-foreground/12 bg-foreground/8 text-foreground/85 hover:bg-foreground/14 hover:text-foreground",
         className,
       )}
     >

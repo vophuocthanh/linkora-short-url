@@ -53,21 +53,21 @@ export default async function PreviewPage({
 
       <GlassCard as="section" className="animate-fade-up w-full max-w-md p-8">
         <div className="mb-5 text-center">
-          <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-2xl border border-white/12 bg-white/5 text-3xl">
+          <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-2xl border border-foreground/12 bg-foreground/5 text-3xl">
             🛡️
           </div>
-          <h1 className="text-2xl font-bold text-white">{t("Preview.heading")}</h1>
-          <p className="mt-2 text-sm text-white/60">
+          <h1 className="text-2xl font-bold text-foreground">{t("Preview.heading")}</h1>
+          <p className="mt-2 text-sm text-foreground/60">
             {t("Preview.description")}
           </p>
         </div>
 
-        <div className="rounded-2xl border border-white/12 bg-white/5 p-4">
-          <p className="text-xs uppercase tracking-wide text-white/40">
+        <div className="rounded-2xl border border-foreground/12 bg-foreground/5 p-4">
+          <p className="text-xs uppercase tracking-wide text-foreground/40">
             {t("Preview.destinationLabel")}
           </p>
-          <p className="mt-1 font-semibold text-white">{destinationHost}</p>
-          <p className="mt-1 break-all text-xs text-white/45">{originalUrl}</p>
+          <p className="mt-1 font-semibold text-foreground">{destinationHost}</p>
+          <p className="mt-1 break-all text-xs text-foreground/45">{originalUrl}</p>
         </div>
 
         <form action={proceed} className="mt-6">

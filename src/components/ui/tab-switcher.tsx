@@ -28,7 +28,7 @@ export function TabSwitcher<T extends string>({
   return (
     <div
       role="tablist"
-      className="relative grid gap-1 rounded-2xl bg-white/5 p-1.5 border border-white/10"
+      className="relative grid gap-1 rounded-2xl bg-foreground/5 p-1.5 border border-foreground/10"
       style={{ gridTemplateColumns: `repeat(${tabs.length}, minmax(0, 1fr))` }}
     >
       {/* Sliding indicator */}
@@ -53,7 +53,7 @@ export function TabSwitcher<T extends string>({
               "h-12 md:h-11 flex-col md:flex-row",
               "px-2 md:px-4",
               "text-[11px] md:text-sm leading-tight whitespace-nowrap",
-              active ? "text-white" : "text-white/55 hover:text-white/80",
+              active ? "text-foreground" : "text-foreground/55 hover:text-foreground/80",
             )}
           >
             {tab.icon}

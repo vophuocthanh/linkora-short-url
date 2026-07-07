@@ -28,11 +28,11 @@ export function ProfileInfo({
           {initial}
         </span>
         <div className="min-w-0">
-          <h2 className="truncate text-xl font-bold text-white">
+          <h2 className="truncate text-xl font-bold text-foreground">
             {displayName}
           </h2>
-          <p className="truncate text-sm text-white/55">{email}</p>
-          <p className="mt-1 inline-flex items-center gap-1.5 text-xs text-white/40">
+          <p className="truncate text-sm text-foreground/55">{email}</p>
+          <p className="mt-1 inline-flex items-center gap-1.5 text-xs text-foreground/40">
             <CalendarIcon className="size-3.5" />
             {t("joined", { date: joinedLabel })}
           </p>
@@ -49,9 +49,9 @@ export function ProfileInfo({
 
 function Stat({ label, value }: { label: string; value: number }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-      <p className="text-2xl font-bold text-white">{value}</p>
-      <p className="text-xs text-white/45">{label}</p>
+    <div className="rounded-2xl border border-foreground/10 bg-foreground/5 px-4 py-3">
+      <p className="text-2xl font-bold text-foreground">{value}</p>
+      <p className="text-xs text-foreground/45">{label}</p>
     </div>
   );
 }
