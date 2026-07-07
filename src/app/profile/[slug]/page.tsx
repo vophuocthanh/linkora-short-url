@@ -9,7 +9,7 @@ import { formatDate } from "@/lib/utils";
 import { getLinkStatus } from "@/lib/link-status";
 import { buildDailySeries, topBreakdown } from "@/lib/analytics";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import { GlassCard } from "@/components/ui/glass-card";
+import { Card } from "@/components/ui/card";
 import { CopyButton } from "@/components/ui/copy-button";
 import { ExternalLinkIcon } from "@/components/ui/icons";
 import { LinkBadges } from "@/components/features/link/link-badges";
@@ -81,7 +81,7 @@ export default async function LinkAnalyticsPage({
           {t("Stats.backToProfile")}
         </Link>
 
-        <GlassCard as="section" className="animate-fade-up p-6 sm:p-7">
+        <Card variant="glass" className="animate-fade-up p-6 sm:p-7">
           <div className="flex items-start justify-between gap-3">
             <div className="min-w-0">
               <h1 className="truncate font-mono text-xl font-bold text-foreground">
@@ -142,7 +142,7 @@ export default async function LinkAnalyticsPage({
               onBio={link.showOnBio}
             />
           </div>
-        </GlassCard>
+        </Card>
 
         <LinkAnalytics
           daily={daily}

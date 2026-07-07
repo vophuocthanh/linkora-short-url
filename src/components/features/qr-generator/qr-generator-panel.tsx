@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import type { QrErrorCorrection, QrOptions } from "@/lib/types";
 import { cn } from "@/lib/utils";
-import { GlassInput } from "@/components/ui/glass-input";
+import { Input } from "@/components/ui/input";
 import { ImageIcon, LinkIcon } from "@/components/ui/icons";
 import { QrCodePreview } from "./qr-code-preview";
 
@@ -53,7 +53,7 @@ export function QrGeneratorPanel({ seedValue }: { seedValue?: string }) {
           <label htmlFor="qr-value" className="text-sm font-medium text-foreground/70">
             {t("contentLabel")}
           </label>
-          <GlassInput
+          <Input
             id="qr-value"
             type="text"
             placeholder={t("contentPlaceholder")}

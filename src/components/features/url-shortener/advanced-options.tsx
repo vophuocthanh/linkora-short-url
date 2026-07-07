@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import type { LinkAdvanced } from "@/lib/url-options";
 import { EXPIRY_CHOICES, EXPIRY_LABEL_KEY, UTM_FIELDS } from "@/lib/url-options";
 import { cn } from "@/lib/utils";
-import { GlassInput } from "@/components/ui/glass-input";
+import { Input } from "@/components/ui/input";
 
 interface AdvancedOptionsProps {
   value: LinkAdvanced;
@@ -36,7 +36,7 @@ export function AdvancedOptions({ value, onChange }: AdvancedOptionsProps) {
       {open && (
         <div className="flex flex-col gap-4 border-t border-foreground/10 p-4">
           <Field label={t("customSlug")}>
-            <GlassInput
+            <Input
               type="text"
               placeholder={t("customSlugPlaceholder")}
               value={value.customSlug}
@@ -66,7 +66,7 @@ export function AdvancedOptions({ value, onChange }: AdvancedOptionsProps) {
             </Field>
 
             <Field label={t("maxClicks")}>
-              <GlassInput
+              <Input
                 type="number"
                 inputMode="numeric"
                 min={1}
@@ -78,7 +78,7 @@ export function AdvancedOptions({ value, onChange }: AdvancedOptionsProps) {
           </div>
 
           <Field label={t("password")}>
-            <GlassInput
+            <Input
               type="password"
               autoComplete="off"
               placeholder={t("passwordPlaceholder")}
@@ -103,7 +103,7 @@ export function AdvancedOptions({ value, onChange }: AdvancedOptionsProps) {
             </span>
             <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
               {UTM_FIELDS.map((field) => (
-                <GlassInput
+                <Input
                   key={field.key}
                   type="text"
                   placeholder={field.label}

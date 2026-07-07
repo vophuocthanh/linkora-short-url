@@ -1,6 +1,5 @@
 import { useTranslations } from "next-intl";
 
-/** Slim footer with credits. */
 export function AppFooter() {
   const t = useTranslations("Footer");
 

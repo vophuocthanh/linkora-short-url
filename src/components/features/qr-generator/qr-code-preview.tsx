@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import type { QrOptions } from "@/lib/types";
 import { generateQrPng, generateQrSvg } from "@/lib/qr-code";
-import { GlassButton } from "@/components/ui/glass-button";
+import { Button } from "@/components/ui/button";
 import { CopyButton } from "@/components/ui/copy-button";
 import { CopyImageButton } from "@/components/ui/copy-image-button";
 import { DownloadIcon, QrIcon } from "@/components/ui/icons";
@@ -76,18 +76,24 @@ export function QrCodePreview({ options }: QrCodePreviewProps) {
 
       <div className="flex w-full max-w-60 flex-col gap-2">
         <div className="grid grid-cols-2 gap-2">
-          <GlassButton disabled={!pngUrl} onClick={downloadPng}>
+          <Button
+            variant="primary"
+            size="glass-md"
+            disabled={!pngUrl}
+            onClick={downloadPng}
+          >
             <DownloadIcon className="size-4" />
             PNG
-          </GlassButton>
-          <GlassButton
-            variant="outline"
+          </Button>
+          <Button
+            variant="glass-outline"
+            size="glass-md"
             disabled={!hasValue}
             onClick={downloadSvg}
           >
             <DownloadIcon className="size-4" />
             SVG
-          </GlassButton>
+          </Button>
         </div>
         <CopyImageButton
           imageUrl={pngUrl ?? ""}

@@ -6,8 +6,8 @@ import { useTranslations } from "next-intl";
 import type { ShortLink } from "@/lib/types";
 import { isValidUrl, normalizeUrl } from "@/lib/utils";
 import { appendUtm } from "@/lib/utm";
-import { GlassButton } from "@/components/ui/glass-button";
-import { GlassInput } from "@/components/ui/glass-input";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { LinkIcon } from "@/components/ui/icons";
 import { ShortUrlResult } from "./short-url-result";
 import {
@@ -80,7 +80,7 @@ export function UrlShortenerPanel({
         </label>
 
         <div className="flex flex-col gap-3 sm:flex-row">
-          <GlassInput
+          <Input
             id="long-url"
             type="text"
             inputMode="url"
@@ -94,14 +94,15 @@ export function UrlShortenerPanel({
             }}
             className="sm:flex-1"
           />
-          <GlassButton
+          <Button
             type="submit"
-            size="lg"
+            variant="primary"
+            size="glass-lg"
             loading={loading}
             className="sm:w-auto"
           >
             {loading ? t("submitting") : t("submit")}
-          </GlassButton>
+          </Button>
         </div>
 
         {error && (

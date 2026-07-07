@@ -1,8 +1,8 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import { GlassCard } from "@/components/ui/glass-card";
-import { GlassButton } from "@/components/ui/glass-button";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 interface LinkStatusScreenProps {
   title: string;
@@ -17,8 +17,8 @@ export function LinkStatusScreen({ title, message, icon, backLabel }: LinkStatus
     <main className="relative flex min-h-dvh flex-col items-center justify-center px-4 py-12">
       <AuroraBackground />
 
-      <GlassCard
-        as="section"
+      <Card
+        variant="glass"
         className="animate-fade-up w-full max-w-md p-8 text-center"
       >
         <div className="mx-auto mb-5 flex size-16 items-center justify-center rounded-2xl border border-foreground/12 bg-foreground/5 text-3xl">
@@ -28,9 +28,11 @@ export function LinkStatusScreen({ title, message, icon, backLabel }: LinkStatus
         <p className="mt-3 text-sm leading-relaxed text-foreground/60">{message}</p>
 
         <Link href="/" className="mt-7 inline-block">
-          <GlassButton size="lg">{backLabel ?? "Back to home"}</GlassButton>
+          <Button variant="primary" size="glass-lg">
+            {backLabel ?? "Back to home"}
+          </Button>
         </Link>
-      </GlassCard>
+      </Card>
     </main>
   );
 }

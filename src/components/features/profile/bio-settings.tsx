@@ -3,8 +3,8 @@
 import { useState, useTransition } from "react";
 import { useTranslations } from "next-intl";
 import { updateProfile } from "@/app/profile/actions";
-import { GlassInput } from "@/components/ui/glass-input";
-import { GlassButton } from "@/components/ui/glass-button";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 interface BioSettingsProps {
   username: string | null;
@@ -39,7 +39,7 @@ export function BioSettings({ username, bio, origin }: BioSettingsProps) {
         <span className="text-sm font-medium text-foreground/70">
           {t("usernameLabel")}
         </span>
-        <GlassInput
+        <Input
           type="text"
           placeholder={t("usernamePlaceholder")}
           value={handle}
@@ -78,9 +78,15 @@ export function BioSettings({ username, bio, origin }: BioSettingsProps) {
         </p>
       )}
 
-      <GlassButton onClick={save} loading={pending} className="self-start">
+      <Button
+        variant="primary"
+        size="glass-md"
+        onClick={save}
+        loading={pending}
+        className="self-start"
+      >
         {pending ? t("saving") : t("save")}
-      </GlassButton>
+      </Button>
     </div>
   );
 }

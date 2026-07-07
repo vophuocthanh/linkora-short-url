@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
-import { GlassCard } from "@/components/ui/glass-card";
+import { Card } from "@/components/ui/card";
 import { RegisterForm } from "@/components/features/auth/register-form";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -13,7 +13,7 @@ export default async function RegisterPage() {
   const t = await getTranslations("Auth");
 
   return (
-    <GlassCard as="section" className="animate-fade-up p-6 sm:p-8">
+    <Card variant="glass" className="animate-fade-up p-6 sm:p-8">
       <header className="mb-6 text-center">
         <h1 className="text-2xl font-bold text-foreground">{t("registerHeading")}</h1>
         <p className="mt-2 text-sm text-foreground/55">{t("registerSubtitle")}</p>
@@ -30,6 +30,6 @@ export default async function RegisterPage() {
           {t("signInNow")}
         </Link>
       </p>
-    </GlassCard>
+    </Card>
   );
 }

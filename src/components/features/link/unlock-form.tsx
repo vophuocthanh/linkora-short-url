@@ -2,8 +2,8 @@
 
 import { useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
-import { GlassInput } from "@/components/ui/glass-input";
-import { GlassButton } from "@/components/ui/glass-button";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { LockIcon } from "@/components/ui/icons";
 
 export function UnlockForm({ slug }: { slug: string }) {
@@ -37,7 +37,7 @@ export function UnlockForm({ slug }: { slug: string }) {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-      <GlassInput
+      <Input
         type="password"
         autoComplete="off"
         placeholder={t("passwordPlaceholder")}
@@ -50,9 +50,9 @@ export function UnlockForm({ slug }: { slug: string }) {
         }}
       />
       {error && <p className="text-sm text-rose-400">{error}</p>}
-      <GlassButton type="submit" size="lg" loading={loading}>
+      <Button type="submit" variant="primary" size="glass-lg" loading={loading}>
         {loading ? t("submitting") : t("submit")}
-      </GlassButton>
+      </Button>
     </form>
   );
 }

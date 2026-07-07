@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 /**
  * lint-staged: CHỈ chạy trên các file đang được `git add` (staged),
  * không quét toàn bộ source code.
@@ -5,5 +6,5 @@
  */
 export default {
   // File JS/TS/JSX/TSX: chạy ESLint và tự động fix
-  "**/*.{js,jsx,ts,tsx,mjs,cjs}": ["eslint --fix --no-warn-ignored"],
+  '**/*.{js,jsx,ts,tsx,mjs,cjs}': ['eslint --fix --no-warn-ignored'],
 };

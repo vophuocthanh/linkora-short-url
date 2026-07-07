@@ -4,8 +4,8 @@ import { useState, type FormEvent } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { GlassInput } from "@/components/ui/glass-input";
-import { GlassButton } from "@/components/ui/glass-button";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { MailIcon, LockIcon, UserIcon } from "@/components/ui/icons";
 import { isValidEmail, MIN_PASSWORD_LENGTH } from "@/lib/utils";
 
@@ -61,7 +61,7 @@ export function RegisterForm() {
         <span className="text-sm font-medium text-foreground/70">
           {t("nameLabel")}
         </span>
-        <GlassInput
+        <Input
           type="text"
           autoComplete="name"
           placeholder={t("namePlaceholder")}
@@ -75,7 +75,7 @@ export function RegisterForm() {
         <span className="text-sm font-medium text-foreground/70">
           {t("emailLabel")}
         </span>
-        <GlassInput
+        <Input
           type="email"
           inputMode="email"
           autoComplete="email"
@@ -94,7 +94,7 @@ export function RegisterForm() {
         <span className="text-sm font-medium text-foreground/70">
           {t("passwordLabel")}
         </span>
-        <GlassInput
+        <Input
           type="password"
           autoComplete="new-password"
           placeholder={t("passwordPlaceholder", { min: MIN_PASSWORD_LENGTH })}
@@ -110,9 +110,15 @@ export function RegisterForm() {
 
       {error && <p className="animate-fade-up text-sm text-rose-400">{error}</p>}
 
-      <GlassButton type="submit" size="lg" loading={loading} className="mt-1">
+      <Button
+        type="submit"
+        variant="primary"
+        size="glass-lg"
+        loading={loading}
+        className="mt-1"
+      >
         {loading ? t("submitting") : t("submit")}
-      </GlassButton>
+      </Button>
     </form>
   );
 }

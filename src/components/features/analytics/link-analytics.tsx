@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import type { Breakdown, DailyBucket } from "@/lib/analytics";
-import { GlassCard } from "@/components/ui/glass-card";
+import { Card } from "@/components/ui/card";
 
 interface LinkAnalyticsProps {
   daily: DailyBucket[];
@@ -21,20 +21,20 @@ export function LinkAnalytics({
 
   if (totalClicks === 0) {
     return (
-      <GlassCard className="p-8 text-center text-sm text-foreground/50">
+      <Card variant="glass" className="p-8 text-center text-sm text-foreground/50">
         {t("empty")}
-      </GlassCard>
+      </Card>
     );
   }
 
   return (
     <div className="flex flex-col gap-4">
-      <GlassCard className="p-5 sm:p-6">
+      <Card variant="glass" className="p-5 sm:p-6">
         <h3 className="mb-4 text-sm font-semibold text-foreground/70">
           {t("chartTitle")}
         </h3>
         <DailyChart data={daily} />
-      </GlassCard>
+      </Card>
 
       <div className="grid gap-4 sm:grid-cols-3">
         <BreakdownCard title={t("deviceTitle")} items={devices} total={totalClicks} />
@@ -82,7 +82,7 @@ function BreakdownCard({
   const t = useTranslations("Analytics");
 
   return (
-    <GlassCard className="p-5">
+    <Card variant="glass" className="p-5">
       <h3 className="mb-3 text-sm font-semibold text-foreground/70">{title}</h3>
       {items.length === 0 ? (
         <p className="text-xs text-foreground/40">{t("noData")}</p>
@@ -106,6 +106,6 @@ function BreakdownCard({
           ))}
         </ul>
       )}
-    </GlassCard>
+    </Card>
   );
 }

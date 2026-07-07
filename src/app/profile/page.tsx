@@ -8,7 +8,7 @@ import { findUserWithLinks } from "@/lib/query";
 import { formatDate } from "@/lib/utils";
 import { getLinkStatus } from "@/lib/link-status";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import { GlassCard } from "@/components/ui/glass-card";
+import { Card } from "@/components/ui/card";
 import { AuthNav } from "@/components/layout/auth-nav";
 import { ProfileInfo } from "@/components/features/profile/profile-info";
 import { BioSettings } from "@/components/features/profile/bio-settings";
@@ -74,7 +74,7 @@ export default async function ProfilePage() {
           <AuthNav />
         </header>
 
-        <GlassCard as="section" className="animate-fade-up p-6 sm:p-7">
+        <Card variant="glass" className="animate-fade-up p-6 sm:p-7">
           <ProfileInfo
             name={user.name}
             email={user.email}
@@ -82,9 +82,9 @@ export default async function ProfilePage() {
             totalLinks={links.length}
             totalClicks={totalClicks}
           />
-        </GlassCard>
+        </Card>
 
-        <GlassCard as="section" className="animate-fade-up p-6 sm:p-7">
+        <Card variant="glass" className="animate-fade-up p-6 sm:p-7">
           <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-foreground/60">
             {t("bioHeading")}
           </h2>
@@ -93,7 +93,7 @@ export default async function ProfilePage() {
             bio={user.bio}
             origin={origin}
           />
-        </GlassCard>
+        </Card>
 
         <section className="animate-fade-up [animation-delay:80ms]">
           <h2 className="mb-3 px-1 text-sm font-semibold uppercase tracking-wide text-foreground/60">

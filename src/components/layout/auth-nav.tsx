@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useSession, signOut } from "next-auth/react";
 import { useTranslations } from "next-intl";
-import { GlassButton } from "@/components/ui/glass-button";
+import { Button } from "@/components/ui/button";
 import { UserIcon } from "@/components/ui/icons";
 
 /** Top-right auth control: sign in / sign up, or the signed-in user + sign out. */
@@ -29,29 +29,33 @@ export function AuthNav() {
             {session.user.name ?? session.user.email}
           </span>
         </Link>
-        <GlassButton
-          variant="ghost"
-          size="sm"
+        <Button
+          variant="glass-ghost"
+          size="glass-sm"
           onClick={() => signOut({ callbackUrl: "/" })}
         >
           {t("signOut")}
-        </GlassButton>
+        </Button>
       </div>
     );
   }
 
   return (
     <div className="flex items-center gap-2">
-      <GlassButton
-        variant="ghost"
-        size="sm"
+      <Button
+        variant="glass-ghost"
+        size="glass-sm"
         onClick={() => router.push("/login")}
       >
         {t("signIn")}
-      </GlassButton>
-      <GlassButton size="sm" onClick={() => router.push("/register")}>
+      </Button>
+      <Button
+        variant="primary"
+        size="glass-sm"
+        onClick={() => router.push("/register")}
+      >
         {t("signUp")}
-      </GlassButton>
+      </Button>
     </div>
   );
 }

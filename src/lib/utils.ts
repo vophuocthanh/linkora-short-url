@@ -1,12 +1,10 @@
-export type ClassValue = string | number | null | false | undefined;
+import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
 
-/**
- * Tiny classnames helper — joins truthy values with a space.
- * Keeps the design system dependency-free (no clsx / tailwind-merge yet).
- */
-export function cn(...classes: ClassValue[]): string {
-  return classes.filter(Boolean).join(" ");
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
 }
+
 
 /** Prefix the input with https:// when the user omits a protocol. */
 export function normalizeUrl(raw: string): string {

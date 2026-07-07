@@ -5,8 +5,8 @@ import { findLinkBySlug } from "@/lib/query";
 import { recordClick } from "@/lib/click";
 import { getLinkStatus, isResolvable } from "@/lib/link-status";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import { GlassCard } from "@/components/ui/glass-card";
-import { GlassButton } from "@/components/ui/glass-button";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { LinkStatusScreen } from "@/components/features/link/link-status-screen";
 import { ExternalLinkIcon } from "@/components/ui/icons";
 
@@ -51,7 +51,7 @@ export default async function PreviewPage({
     <main className="relative flex min-h-dvh flex-col items-center justify-center px-4 py-12">
       <AuroraBackground />
 
-      <GlassCard as="section" className="animate-fade-up w-full max-w-md p-8">
+      <Card variant="glass" className="animate-fade-up w-full max-w-md p-8">
         <div className="mb-5 text-center">
           <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-2xl border border-foreground/12 bg-foreground/5 text-3xl">
             🛡️
@@ -71,12 +71,17 @@ export default async function PreviewPage({
         </div>
 
         <form action={proceed} className="mt-6">
-          <GlassButton type="submit" size="lg" className="w-full">
+          <Button
+            type="submit"
+            variant="primary"
+            size="glass-lg"
+            className="w-full"
+          >
             <ExternalLinkIcon className="size-4" />
             {t("Preview.continueButton")}
-          </GlassButton>
+          </Button>
         </form>
-      </GlassCard>
+      </Card>
     </main>
   );
 }

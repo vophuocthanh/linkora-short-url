@@ -1,5 +1,4 @@
 export interface DailyBucket {
-  /** Short dd/mm label for the axis. */
   label: string;
   count: number;
 }

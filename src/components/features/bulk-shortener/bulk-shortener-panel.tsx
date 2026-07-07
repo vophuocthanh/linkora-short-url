@@ -4,7 +4,7 @@ import { useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { isValidUrl } from "@/lib/utils";
-import { GlassButton } from "@/components/ui/glass-button";
+import { Button } from "@/components/ui/button";
 import { CopyButton } from "@/components/ui/copy-button";
 import { DownloadIcon } from "@/components/ui/icons";
 
@@ -117,9 +117,9 @@ export function BulkShortenerPanel() {
           className="w-full resize-y rounded-2xl border border-foreground/12 bg-foreground/5 p-4 font-mono text-sm text-foreground placeholder:text-foreground/35 outline-none transition-colors focus:border-brand-400/70 focus:bg-foreground/10"
         />
         {error && <p className="text-sm text-rose-400">{error}</p>}
-        <GlassButton type="submit" size="lg" loading={loading}>
+        <Button type="submit" variant="primary" size="glass-lg" loading={loading}>
           {loading ? t("submitting") : t("submit")}
-        </GlassButton>
+        </Button>
       </form>
 
       {results.length > 0 && (
@@ -131,10 +131,14 @@ export function BulkShortenerPanel() {
                 total: results.length,
               })}
             </p>
-            <GlassButton size="sm" variant="outline" onClick={downloadCsv}>
+            <Button
+              variant="glass-outline"
+              size="glass-sm"
+              onClick={downloadCsv}
+            >
               <DownloadIcon className="size-4" />
               {t("exportCsv")}
-            </GlassButton>
+            </Button>
           </div>
 
           <ul className="flex flex-col gap-2">
